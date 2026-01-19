@@ -1,0 +1,15 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "author": "Divyam",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "prettier": "3.8.0"
+  }
+}
