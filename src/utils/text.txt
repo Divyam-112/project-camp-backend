@@ -1,0 +1,84 @@
+## 🔹 Kaam kaise karta hai?
+
+1. Machine **start state q₀** se shuru hoti hai
+2. String ka **har symbol ek-ek karke read** karti hai
+3. Har symbol pe state change hoti hai (transition rules ke according)
+4. String khatam hone ke baad:
+
+   * Agar machine **final state** me hai → ✅ **ACCEPT**
+   * Nahi hai → ❌ **REJECT**
+
+---
+
+## 🔥 Simple Example
+
+### Language:
+
+**L = { strings that end with 1 }**
+Alphabet: Σ = {0,1}
+
+### States:
+
+* q0 → last symbol 1 nahi tha
+* q1 → last symbol 1 tha (ACCEPT state)
+
+### Transitions:
+
+| Current State | Input | Next State |
+| ------------- | ----- | ---------- |
+| q0            | 0     | q0         |
+| q0            | 1     | q1         |
+| q1            | 0     | q0         |
+| q1            | 1     | q1         |
+
+### Samjho string: **101**
+
+Start → q0
+Read 1 → q1
+Read 0 → q0
+Read 1 → q1 (final state)
+
+👉 Final state me end hua → **String ACCEPTED**
+
+---
+
+## 🔹 FA kya kya kar sakta hai?
+
+FA sirf **Regular Languages** recognize kar sakta hai.
+
+✔ Kar sakta hai:
+
+* String ends with 01
+* Even number of 0s
+* Contains substring “ab”
+
+❌ Nahi kar sakta:
+
+* Equal number of a and b
+* Balanced brackets `(( ))`
+  Kyuki uske paas **count karne ki memory nahi hoti**
+
+---
+
+## 🔹 Types of Finite Automata
+
+| Type    | Full Form            | Special Feature                          |
+| ------- | -------------------- | ---------------------------------------- |
+| **DFA** | Deterministic FA     | Har input pe sirf **1** next state       |
+| **NFA** | Non-deterministic FA | Ek input pe **multiple possible** states |
+
+👉 Power same hoti hai dono ki, bas working style alag hota hai.
+
+---
+
+## 🧠 Ek line me yaad rakh:
+
+**Finite Automata = state-based machine with no extra memory, used to recognize regular patterns in strings.**
+
+---
+
+Agar chaho toh next main:
+👉 DFA vs NFA difference
+👉 FA ka diagram kaise banate hain
+
+yeh bhi simple tareeke se kara deta hoon ✨
